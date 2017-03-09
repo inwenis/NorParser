@@ -46,3 +46,23 @@ class Parsing_sentence_with_multiple_spaces
     static Parser sut;
     static List<Sentence> output;
 }
+
+[Subject("Parser")]
+class Parsing_sentence_with_nonalphabetic_characters
+{
+    Establish context = () =>
+    {
+        sut = new Parser();
+    };
+
+    Because of = () => {
+        output = sut.Parse("  i ~ had!a @mad# $ % ^ & * ( ) _ + - = ` { } |  : \" < > ? [ ] \\ ; ' , . / * - + , ");
+    };
+
+    It treats_non_alphabetic_characters_as_spaces = () => {
+        output.First().Words.ShouldContainOnly("i", "had", "a", "mad");
+    };
+
+    static Parser sut;
+    static List<Sentence> output;
+}
