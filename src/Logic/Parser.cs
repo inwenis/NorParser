@@ -9,8 +9,10 @@ namespace Logic
         {
             var list = new List<Sentence>();
             var sentence = new Sentence();
-            var words = input.Split(' ');
-            sentence.Words = words.Where(w => !string.IsNullOrWhiteSpace(w)).ToList();
+            sentence.Words = input
+                .Split(' ')
+                .Where(w => !string.IsNullOrWhiteSpace(w))
+                .ToList();
             list.Add(sentence);
             return list;
         }
