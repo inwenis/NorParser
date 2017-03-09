@@ -6,7 +6,9 @@ namespace Logic
     {
         public List<object> Parse(string input)
         {
-            throw new System.NotImplementedException();
+            var list = new List<object>();
+            list.Add(new object());
+            return list;
         }
     }
 }
