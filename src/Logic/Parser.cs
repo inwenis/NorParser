@@ -10,7 +10,7 @@ namespace Logic
             var list = new List<Sentence>();
             var sentence = new Sentence();
             var words = input.Split(' ');
-            sentence.Words = words.ToList();
+            sentence.Words = words.Where(w => !string.IsNullOrWhiteSpace(w)).ToList();
             list.Add(sentence);
             return list;
         }
