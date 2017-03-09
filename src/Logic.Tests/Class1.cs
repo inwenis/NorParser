@@ -76,7 +76,7 @@ class Parsing_multiple_sentences_separated_by_dots
     };
 
     Because of = () => {
-        output = sut.Parse("i had a mad idea. The idea was great. Why dint we use it");
+        output = sut.Parse("i had a mad idea. The idea was great. Why didn't we use it");
     };
 
     It returnes_all_sentences = () =>
