@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Logic;
 using Machine.Specifications;
 
@@ -19,7 +20,11 @@ class When_parsing_a_simple_sentence
         output.Count.ShouldEqual(1);
     };
 
+    It returns_all_words = () => {
+        output.First().Words.ShouldContainOnly("Mary", "had", "a", "little", "lamb");
+    };
+
     static Parser sut;
     static string input;
-    static List<object> output;
+    static List<Sentence> output;
 }

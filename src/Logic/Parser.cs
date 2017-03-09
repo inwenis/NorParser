@@ -1,13 +1,17 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Logic
 {
     public class Parser
     {
-        public List<object> Parse(string input)
+        public List<Sentence> Parse(string input)
         {
-            var list = new List<object>();
-            list.Add(new object());
+            var list = new List<Sentence>();
+            var sentence = new Sentence();
+            var words = input.Split(' ');
+            sentence.Words = words.ToList();
+            list.Add(sentence);
             return list;
         }
     }
