@@ -4,7 +4,7 @@ using Logic;
 using Machine.Specifications;
 
 [Subject("Parser")]
-class When_parsing_a_simple_sentence
+class Parsing_a_simple_sentence
 {
     Establish context = () =>
     {
