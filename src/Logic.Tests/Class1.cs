@@ -66,3 +66,24 @@ class Parsing_sentence_with_nonalphabetic_characters
     static Parser sut;
     static List<Sentence> output;
 }
+
+[Subject("Parser")]
+class Parsing_multiple_sentences_separated_by_dots
+{
+    Establish context = () =>
+    {
+        sut = new Parser();
+    };
+
+    Because of = () => {
+        output = sut.Parse("i had a mad idea. The idea was great. Why dint we use it");
+    };
+
+    It returnes_all_sentences = () =>
+    {
+        output.Count.ShouldEqual(3);
+    };
+
+    static Parser sut;
+    static List<Sentence> output;
+}

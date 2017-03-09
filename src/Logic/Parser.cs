@@ -9,13 +9,15 @@ namespace Logic
         public List<Sentence> Parse(string input)
         {
             var list = new List<Sentence>();
-            var sentence = new Sentence();
-            sentence.Words =
-                ReplaceNonAlphabetCharactersWithSpace(input)
-                .Split(' ')
-                .Where(w => !string.IsNullOrWhiteSpace(w))
-                .ToList();
-            list.Add(sentence);
+            var sentences = input.Split('.');
+            foreach (var sentence in sentences)
+            {
+                var words = ReplaceNonAlphabetCharactersWithSpace(sentence)
+                    .Split(' ')
+                    .Where(w => !string.IsNullOrWhiteSpace(w))
+                    .ToList();
+                list.Add(new Sentence {Words = words});
+            }
             return list;
         }
 
