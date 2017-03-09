@@ -36,7 +36,7 @@ class Parsing_sentence_with_multiple_spaces
     };
 
     Because of = () => {
-        output = sut.Parse("  had   ");
+        output = sut.Parse("  had \t ");
     };
 
     It returns_only_valid_nonempty_words = () => {
