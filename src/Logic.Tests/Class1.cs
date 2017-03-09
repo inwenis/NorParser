@@ -8,12 +8,11 @@ class Parsing_a_simple_sentence
 {
     Establish context = () =>
     {
-        input = "Mary had a little lamb";
         sut = new Parser();
     };
 
     Because of = () => {
-        output = sut.Parse(input);
+        output = sut.Parse("Mary had a little lamb");
     };
 
     It returns_one_sentence = () => {
@@ -25,7 +24,6 @@ class Parsing_a_simple_sentence
     };
 
     static Parser sut;
-    static string input;
     static List<Sentence> output;
 }
 
@@ -34,12 +32,11 @@ class Parsing_sentence_with_multiple_spaces
 {
     Establish context = () =>
     {
-        input = "  had   ";
         sut = new Parser();
     };
 
     Because of = () => {
-        output = sut.Parse(input);
+        output = sut.Parse("  had   ");
     };
 
     It returns_only_valid_nonempty_words = () => {
@@ -47,6 +44,5 @@ class Parsing_sentence_with_multiple_spaces
     };
 
     static Parser sut;
-    static string input;
     static List<Sentence> output;
 }
