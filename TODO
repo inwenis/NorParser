@@ -3,3 +3,4 @@
 3. last names with a - -> those should probably not be separated
 4. do new line characters indicate a sperated sentence? or only dots separate sentences?
 	the specs only show examples when a dot is followed by a newline so it's not clear
+5. the parser seems like a perfect candidate for property-based tests
