@@ -8,18 +8,21 @@ namespace Logic
     {
         public string Write(List<Sentence> sentences)
         {
+            var stringBuilder = new StringBuilder();
+
             var maxWordsCount = sentences.Max(s => s.Words.Count);
             var columnHeaders = Enumerable.Range(1, maxWordsCount).Select(i => $", Word {i}");
-            var sb = new StringBuilder();
-            sb.AppendLine(string.Join("", columnHeaders));
+            stringBuilder.AppendLine(string.Join("", columnHeaders));
+
             var index = 1;
             foreach (var sentence in sentences)
             {
-                sb.Append($"Sentence {index}, ");
-                sb.AppendLine(string.Join(", ", sentence.Words));
+                stringBuilder.Append($"Sentence {index}, ");
+                stringBuilder.AppendLine(string.Join(", ", sentence.Words));
                 index++;
             }
-            return sb.ToString();
+
+            return stringBuilder.ToString();
         }
     }
 }
