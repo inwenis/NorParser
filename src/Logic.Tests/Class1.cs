@@ -11,11 +11,13 @@ class Parsing_a_simple_sentence
         sut = new Parser();
     };
 
-    Because of = () => {
+    Because of = () =>
+    {
         output = sut.Parse("Mary had a little lamb");
     };
 
-    It returns_one_sentence = () => {
+    It returns_one_sentence = () =>
+    {
         output.Count.ShouldEqual(1);
     };
 
@@ -60,11 +62,13 @@ class Parsing_sentence_with_nonalphabetic_characters
         sut = new Parser();
     };
 
-    Because of = () => {
+    Because of = () =>
+    {
         output = sut.Parse("  i ~ had!a @mad# $ % ^ & * ( ) _ + - = ` { } |  : \" < > ? [ ] \\ ; ' , . / * - + , ");
     };
 
-    It treats_non_alphabetic_characters_as_spaces = () => {
+    It treats_non_alphabetic_characters_as_spaces = () =>
+    {
         output.First().Words.ShouldContainOnly("i", "had", "a", "mad");
     };
 
@@ -101,7 +105,8 @@ class Parsing_words_with_special_nonalphabetic_characters
         sut = new Parser();
     };
 
-    Because of = () => {
+    Because of = () =>
+    {
         output = sut.Parse("don't Graham-Cumming lists'");
     };
 
