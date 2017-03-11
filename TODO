@@ -1,3 +1,5 @@
 1. don't -> this is one word, it should not be parsed as two words
 2. what about numbers?
 3. last names with a - -> those should probably not be separated
+4. do new line characters indicate a sperated sentence? or only dots separate sentences?
+	the specs only show examples when a dot is followed by a newline so it's not clear
