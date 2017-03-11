@@ -8,3 +8,5 @@
 	this dependes on what we are going to use the parsed output for
 		if we use it to look up the words in a dictionary then apostrophes should be removed
 		if we use it to understand the sentences the apostrophes should stay since they provide valuable information
+7. writer vs serializer - which name is better?
+8. accept IEnumerable<> insted of List<> as input
