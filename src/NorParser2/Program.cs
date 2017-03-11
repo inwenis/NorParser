@@ -40,7 +40,18 @@ namespace NorParser2
                 }
             }
 
-            Console.ReadKey();
+            var sentences = parser.Parse(inputSimple);
+            var xmlWriter = new XmlWriter();
+            var xDocument = xmlWriter.Write(sentences);
+            Console.WriteLine("------------------------------");
+            Console.WriteLine(xDocument.ToString());
+
+            var csvWriter = new CsvWriter();
+            var csv = csvWriter.Write(sentences);
+            Console.WriteLine("------------------------------");
+            Console.WriteLine(csv);
+
+            Console.ReadLine();
         }
     }
 }
