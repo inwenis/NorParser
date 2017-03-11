@@ -92,3 +92,24 @@ class Parsing_multiple_sentences_separated_by_dots
     static Parser sut;
     static List<Sentence> output;
 }
+
+[Subject("Parser")]
+class Parsing_words_with_special_nonalphabetic_characters
+{
+    Establish context = () =>
+    {
+        sut = new Parser();
+    };
+
+    Because of = () => {
+        output = sut.Parse("don't Graham-Cumming lists'");
+    };
+
+    It treats_special_nonalphabetic_characters_as_part_of_words = () =>
+    {
+        output.First().Words.ShouldContain("don't", "Graham-Cumming", "lists'");
+    };
+
+    static Parser sut;
+    static List<Sentence> output;
+}

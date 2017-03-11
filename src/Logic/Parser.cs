@@ -15,6 +15,7 @@ namespace Logic
                 var words = ReplaceNonAlphabetCharactersWithSpace(sentence)
                     .Split(' ')
                     .Where(w => !string.IsNullOrWhiteSpace(w))
+                    .Where(w => !w.All(char.IsPunctuation))
                     .OrderBy(s => s)
                     .ToList();
                 list.Add(new Sentence {Words = words});
@@ -24,7 +25,7 @@ namespace Logic
 
         private string ReplaceNonAlphabetCharactersWithSpace(string input)
         {
-            return Regex.Replace(input, "[^a-zA-Z]+", " ");
+            return Regex.Replace(input, "[^a-zA-Z'-]+", " ");
         }
     }
 }
