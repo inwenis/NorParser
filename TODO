@@ -4,3 +4,7 @@
 4. do new line characters indicate a sperated sentence? or only dots separate sentences?
 	the specs only show examples when a dot is followed by a newline so it's not clear
 5. the parser seems like a perfect candidate for property-based tests
+6. should apostrophes at end of words stay?
+	this dependes on what we are going to use the parsed output for
+		if we use it to look up the words in a dictionary then apostrophes should be removed
+		if we use it to understand the sentences the apostrophes should stay since they provide valuable information
