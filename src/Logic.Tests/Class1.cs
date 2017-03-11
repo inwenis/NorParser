@@ -23,6 +23,11 @@ class Parsing_a_simple_sentence
         output.First().Words.ShouldContainOnly("Mary", "had", "a", "little", "lamb");
     };
 
+    It returns_words_in_alphabetical_order = () =>
+    {
+        output.First().Words.ShouldEqual(new List<string> {"a", "had", "lamb", "little", "Mary"});
+    };
+
     static Parser sut;
     static List<Sentence> output;
 }

@@ -15,6 +15,7 @@ namespace Logic
                 var words = ReplaceNonAlphabetCharactersWithSpace(sentence)
                     .Split(' ')
                     .Where(w => !string.IsNullOrWhiteSpace(w))
+                    .OrderBy(s => s)
                     .ToList();
                 list.Add(new Sentence {Words = words});
             }
