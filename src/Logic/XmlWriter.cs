@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Xml.Linq;
 
 namespace Logic
@@ -7,18 +8,14 @@ namespace Logic
     {
         public XDocument Write(List<Sentence> input)
         {
-            var root = new XElement("text");
-            foreach (var sentence in input)
+            var sentenceElements = input.Select(sentence =>
             {
-                var sentenceElement = new XElement("sentence");
-                foreach (var word in sentence.Words)
-                {
-                    sentenceElement.Add(new XElement("word", word));
-                }
-                root.Add(sentenceElement);
-            }
+                var wordElements = sentence.Words.Select(word => new XElement("word", word));
+                return new XElement("sentence", wordElements);
+            });
+            var rootElement = new XElement("text", sentenceElements);
             var xmlDeclaration = new XDeclaration("1.0", "UTF-8", "yes");
-            return new XDocument(xmlDeclaration, root);
+            return new XDocument(xmlDeclaration, rootElement);
         }
     }
 }
