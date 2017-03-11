@@ -3,7 +3,7 @@ using System.Linq;
 using Logic;
 using Machine.Specifications;
 
-[Subject("Parser")]
+[Subject(typeof(Parser))]
 class Parsing_a_simple_sentence
 {
     Establish context = () =>
@@ -39,7 +39,7 @@ class Parsing_a_simple_sentence
     static List<Sentence> output;
 }
 
-[Subject("Parser")]
+[Subject(typeof(Parser))]
 class Parsing_sentence_with_multiple_spaces
 {
     Establish context = () =>
@@ -59,7 +59,7 @@ class Parsing_sentence_with_multiple_spaces
     static List<Sentence> output;
 }
 
-[Subject("Parser")]
+[Subject(typeof(Parser))]
 class Parsing_sentence_with_nonalphabetic_characters
 {
     Establish context = () =>
@@ -81,7 +81,7 @@ class Parsing_sentence_with_nonalphabetic_characters
     static List<Sentence> output;
 }
 
-[Subject("Parser")]
+[Subject(typeof(Parser))]
 class Parsing_multiple_sentences_separated_by_dots
 {
     Establish context = () =>
@@ -102,7 +102,7 @@ class Parsing_multiple_sentences_separated_by_dots
     static List<Sentence> output;
 }
 
-[Subject("Parser")]
+[Subject(typeof(Parser))]
 class Parsing_words_with_special_nonalphabetic_characters
 {
     Establish context = () =>
@@ -124,7 +124,7 @@ class Parsing_words_with_special_nonalphabetic_characters
     static List<Sentence> output;
 }
 
-[Subject("Parser")]
+[Subject(typeof(Parser))]
 class Parsing_sentences_with_special_characters_not_being_part_of_words
 {
     Establish context = () =>
