@@ -1,7 +1,17 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<!-- xml -->
+<div>
+    <form asp-controller="App" asp-action="ConvertToXml" method="get">
+        <textarea id="text" name="text"></textarea>
+        <button type="submit">To Xml</button>
+    </form>
+</div>
+<!-- csv -->
+<div>
 
+</div>
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
