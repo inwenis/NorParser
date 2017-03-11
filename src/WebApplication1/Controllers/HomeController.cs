@@ -16,8 +16,8 @@ namespace WebApplication1.Controllers
             var sentences = parser.Parse(text);
             var xmlWriter = new XmlWriter();
             var xDocument = xmlWriter.Write(sentences);
-            ViewData["Xml"] = xDocument.ToString();
-            return View();
+            ViewData["ConversionResult"] = xDocument.ToString();
+            return View("Index");
         }
 
         public IActionResult ConvertToCsv(string text)
@@ -26,8 +26,8 @@ namespace WebApplication1.Controllers
             var sentences = parser.Parse(text);
             var csvWriter = new CsvWriter();
             var csv = csvWriter.Write(sentences);
-            ViewData["Csv"] = csv;
-            return View();
+            ViewData["ConversionResult"] = csv;
+            return View("Index");
         }
 
         public IActionResult Error()
