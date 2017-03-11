@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -9,7 +10,7 @@ namespace Logic
         public List<Sentence> Parse(string input)
         {
             var list = new List<Sentence>();
-            var sentences = input.Split('.');
+            var sentences = input.Split(new [] { '.' }, StringSplitOptions.RemoveEmptyEntries);
             foreach (var sentence in sentences)
             {
                 var words = ReplaceNonAlphabetCharactersWithSpace(sentence)

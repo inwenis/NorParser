@@ -13,7 +13,7 @@ class Parsing_a_simple_sentence
 
     Because of = () =>
     {
-        output = sut.Parse("Mary had a little lamb");
+        output = sut.Parse("Mary had a little lamb.");
     };
 
     It returns_one_sentence = () =>
@@ -28,6 +28,11 @@ class Parsing_a_simple_sentence
     It returns_words_in_alphabetical_order = () =>
     {
         output.First().Words.ShouldEqual(new List<string> {"a", "had", "lamb", "little", "Mary"});
+    };
+
+    It does_not_return_empty_sentences = () =>
+    {
+        output.ShouldNotContain(s => s.Words== null || s.Words.Count == 0);
     };
 
     static Parser sut;
