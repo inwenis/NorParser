@@ -10,7 +10,10 @@
 </div>
 <!-- csv -->
 <div>
-
+    <form asp-controller="App" asp-action="ConvertToCsv" method="get">
+        <textarea id="text" name="text"></textarea>
+        <button type="submit">To Csv</button>
+    </form>
 </div>
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
