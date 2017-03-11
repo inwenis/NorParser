@@ -30,6 +30,13 @@ class Serializing_simple_sentence
             .ShouldContain("a", "bb", "ccc");
     };
 
+    It returnes_xml_with_proper_declaration = () =>
+    {
+        result.Declaration.Encoding.ShouldEqual("UTF-8");
+        result.Declaration.Version.ShouldEqual("1.0");
+        result.Declaration.Standalone.ShouldEqual("yes");
+    };
+
     static XmlWriter sut;
     static List<Sentence> input;
     static XDocument result;

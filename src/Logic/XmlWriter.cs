@@ -17,7 +17,8 @@ namespace Logic
                 }
                 root.Add(sentenceElement);
             }
-            return new XDocument(root);
+            var xmlDeclaration = new XDeclaration("1.0", "UTF-8", "yes");
+            return new XDocument(xmlDeclaration, root);
         }
     }
 }
