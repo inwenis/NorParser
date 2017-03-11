@@ -16,6 +16,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Logic", "src\Logic\Logic.xp
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Logic.Tests", "src\Logic.Tests\Logic.Tests.xproj", "{58652313-143D-4865-993D-32459516D74F}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WebApplication1", "src\WebApplication1\WebApplication1.xproj", "{57907093-015D-40F8-AAB8-2F8E7A19504F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{58652313-143D-4865-993D-32459516D74F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58652313-143D-4865-993D-32459516D74F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58652313-143D-4865-993D-32459516D74F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57907093-015D-40F8-AAB8-2F8E7A19504F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57907093-015D-40F8-AAB8-2F8E7A19504F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57907093-015D-40F8-AAB8-2F8E7A19504F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57907093-015D-40F8-AAB8-2F8E7A19504F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,5 +48,6 @@ Global
 		{A121DED7-8468-41B6-AC24-FFD00E22DF02} = {59F53EB9-E1FE-4274-8A76-0C78540EB3D4}
 		{C8AC6E47-2FE3-47D3-B8ED-829EB7AAEE8C} = {59F53EB9-E1FE-4274-8A76-0C78540EB3D4}
 		{58652313-143D-4865-993D-32459516D74F} = {59F53EB9-E1FE-4274-8A76-0C78540EB3D4}
+		{57907093-015D-40F8-AAB8-2F8E7A19504F} = {59F53EB9-E1FE-4274-8A76-0C78540EB3D4}
 	EndGlobalSection
 EndGlobal
