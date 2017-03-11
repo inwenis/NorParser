@@ -1,14 +1,12 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<!-- xml -->
 <div>
     <form asp-controller="App" asp-action="ConvertToXml" method="get">
         <textarea id="text" name="text"></textarea>
         <button type="submit">To Xml</button>
     </form>
 </div>
-<!-- csv -->
 <div>
     <form asp-controller="App" asp-action="ConvertToCsv" method="get">
         <textarea id="text" name="text"></textarea>
