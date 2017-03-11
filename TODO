@@ -10,3 +10,4 @@
 		if we use it to understand the sentences the apostrophes should stay since they provide valuable information
 7. writer vs serializer - which name is better?
 8. accept IEnumerable<> insted of List<> as input
+9. add integration tests
