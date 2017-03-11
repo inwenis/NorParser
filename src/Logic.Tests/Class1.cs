@@ -64,7 +64,7 @@ class Parsing_sentence_with_nonalphabetic_characters
 
     Because of = () =>
     {
-        output = sut.Parse("  i ~ had!a @mad# $ % ^ & * ( ) _ + - = ` { } |  : \" < > ? [ ] \\ ; ' , . / * - + , ");
+        output = sut.Parse("  i ~ had!a @mad# $ % ^ & * ( ) _ + - = ` { } |  : \" < > ? [ ] \\ ; , . / * + , ");
     };
 
     It treats_non_alphabetic_characters_as_spaces = () =>
@@ -113,6 +113,28 @@ class Parsing_words_with_special_nonalphabetic_characters
     It treats_special_nonalphabetic_characters_as_part_of_words = () =>
     {
         output.First().Words.ShouldContain("don't", "Graham-Cumming", "lists'");
+    };
+
+    static Parser sut;
+    static List<Sentence> output;
+}
+
+[Subject("Parser")]
+class Parsing_sentences_with_special_characters_not_being_part_of_words
+{
+    Establish context = () =>
+    {
+        sut = new Parser();
+    };
+
+    Because of = () =>
+    {
+        output = sut.Parse("aaa ' bbb - ccc '&' *-=");
+    };
+
+    It return_only_validi_words = () =>
+    {
+        output.First().Words.ShouldContainOnly("aaa", "bbb", "ccc");
     };
 
     static Parser sut;
