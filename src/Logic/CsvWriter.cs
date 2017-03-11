@@ -12,9 +12,12 @@ namespace Logic
             var columnHeaders = Enumerable.Range(1, maxWordsCount).Select(i => $", Word {i}");
             var sb = new StringBuilder();
             sb.AppendLine(string.Join("", columnHeaders));
+            var index = 1;
             foreach (var sentence in sentences)
             {
+                sb.Append($"Sentence {index}, ");
                 sb.AppendLine(string.Join(", ", sentence.Words));
+                index++;
             }
             return sb.ToString();
         }

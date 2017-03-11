@@ -31,6 +31,11 @@ class Serializing_simple_sentence_to_csv
         result.ShouldStartWith(", Word 1, Word 2, Word 3");
     };
 
+    It returnes_csv_with_row_header_for_each_sentence = () =>
+    {
+        result.Split('\n')[1].ShouldStartWith("Sentence 1, ");
+    };
+
     static CsvWriter sut;
     static List<Sentence> input;
     static string result;
