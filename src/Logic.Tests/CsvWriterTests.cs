@@ -26,7 +26,7 @@ class Serializing_simple_sentence_to_csv
         result.ShouldContain("ccc");
     };
 
-    It returnes_csv_with_proper_column_headings = () =>
+    It returnes_csv_with_proper_column_headers = () =>
     {
         result.ShouldStartWith(", Word 1, Word 2, Word 3");
     };
