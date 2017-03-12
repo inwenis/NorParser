@@ -16,26 +16,17 @@
             <div class="well">
                 <p>Input text below to convert it to XML or CSV</p>
                 <div class="form-group">
-                    <textarea class="form-control" id="input" rows="14"></textarea>
+                    <textarea class="form-control" id="input" rows="23"></textarea>
                 </div>
                 <button class="btn btn-primary btn-lg" onclick="ConvertToXml()">To XML</button>
                 <button class="btn btn-primary btn-lg" onclick="ConvertToCsv()">To CSV</button>
-            </div>
-            <div class="well">
-                <p>Upload text file and convert it to XML</p>
-                <form asp-controller="Home" asp-action="TextFileToXml" method="post" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <input type="file" name="textfile" accept=".txt">
-                    </div>
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">To XML</button>
-                </form>
             </div>
         </div>
         <div class="col-md-6">
             <div class="well">
                 <p>The convertion result will be displayed below</p>
                 <div class="form-group">
-                    <textarea id="resultTextArea" class="form-control" rows="25">@ViewData["ConversionResult"]</textarea>
+                    <textarea id="resultTextArea" class="form-control" rows="25"></textarea>
                 </div>
             </div>
         </div>
