@@ -16,7 +16,7 @@ namespace WebApplication1.Controllers.Api
         }
 
         [HttpPost("api/toCsv")]
-        public IActionResult ToCsv(string text)
+        public IActionResult ToCsv([FromBody]string text)
         {
             var parser = new Parser();
             var sentences = parser.Parse(text);

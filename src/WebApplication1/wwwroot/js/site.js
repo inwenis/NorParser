@@ -18,3 +18,8 @@ function ConvertToXml() {
     var input = document.getElementById("input").value;
     SendRequest("/api/toXml", input, DisplayResult);
 }
+
+function ConvertToCsv() {
+    var input = document.getElementById("input").value;
+    SendRequest("/api/toCsv", input, DisplayResult);
+}
