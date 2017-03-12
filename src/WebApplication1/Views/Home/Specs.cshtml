@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "NorParser";
+}
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="well">
+            <h2>The specs</h2>
+            <br />
+            <p>The following is a small coding exercise. You have to provide a working program that fulfils a number of requirements. The assessment of your answer will be based on fulfilment of functionality requirements and the quality of the implementation.</p>
+            <br />
+            <p>The basic requirement is to provide a program that can convert text into either XML format-ted data or comma separated (CSV) data. The text is to be parsed, broken into sentences and words and the words have to be sorted.</p>
+            <br />
+            <p>#####################################################################################</p>
+            <br />
+            <p>The program must be able to input text like:</p>
+            <br />
+            <pre>
+"Mary had a little lamb. Peter called for the wolf, and Aesop came.
+Cinderella likes shoes."
+                </pre>
+            <br />
+            <p>and parse this text into relevant model classes, and be able to convert the structure to both XML and CSV format.</p>
+            <br />
+            <p>
+                The parsing must break the text into sentences and words. The parser should allow some whitespace around words and delimiters, e.g. the following is allowed as input and should produce the same result as the first example:
+            </p>
+            <br />
+            <pre>
+"  Mary   had a little  lamb  .
+Peter   called for the wolf   ,  and Aesop came .
+Cinderella  likes shoes."
+                </pre>
+            <br />
+            <br />
+            <p>#####################################################################################</p>
+            <br />
+            <p>In both cases the XML result should be like:</p>
+            <pre>
+&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;text&gt;
+    &lt;sentence&gt;
+        &lt;word&gt;a&lt;/word&gt;
+        &lt;word&gt;had&lt;/word&gt;
+        &lt;word&gt;lamb&lt;/word&gt;
+        &lt;word&gt;little&lt;/word&gt;
+        &lt;word&gt;Mary&lt;/word&gt;
+    &lt;/sentence&gt;
+    &lt;sentence&gt;
+        &lt;word&gt;Aesop&lt;/word&gt;
+        &lt;word&gt;and&lt;/word&gt;
+        &lt;word&gt;called&lt;/word&gt;
+        &lt;word&gt;came&lt;/word&gt;
+        &lt;word&gt;for&lt;/word&gt;
+        &lt;word&gt;Peter&lt;/word&gt;
+        &lt;word&gt;the&lt;/word&gt;
+        &lt;word&gt;wolf&lt;/word&gt;
+    &lt;/sentence&gt;
+    &lt;sentence&gt;
+        &lt;word&gt;Cinderella&lt;/word&gt;
+        &lt;word&gt;likes&lt;/word&gt;
+        &lt;word&gt;shoes&lt;/word&gt;
+    &lt;/sentence&gt;
+&lt;/text&gt;
+                </pre>
+            <br />
+            <p>And the CSV result should likewise be:</p>
+            <pre>
+, Word 1, Word 2, Word 3, Word 4, Word 5, Word 6, Word 7, Word 8
+Sentence 1, a, had, lamb, little, Mary
+Sentence 2, Aesop, and, called, came, for, Peter, the, wolf
+Sentence 3, Cinderella, likes, shoes</pre>
+            <br />
+            <p>#####################################################################################</p>
+            <br />
+            <p>Expected technology - ASP.NET MVC (includes ASP.NET MVC WebAPI)</p>
+            <br />
+            <p>#####################################################################################</p>
+            <br />
+        </div>
+    </div>
+</div>

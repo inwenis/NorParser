@@ -9,6 +9,11 @@ namespace WebApplication1.Controllers
             return View();
         }
 
+        public IActionResult Specs()
+        {
+            return View();
+        }
+
         public IActionResult Error()
         {
             return View();
