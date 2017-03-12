@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using WebApplication1.Middleware;
 
 namespace WebApplication1
 {
@@ -44,6 +45,7 @@ namespace WebApplication1
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+            loggerFactory.AddFile("Logs/Log-{Date}.txt");
 
             app.UseApplicationInsightsRequestTelemetry();
 
@@ -60,7 +62,7 @@ namespace WebApplication1
             app.UseApplicationInsightsExceptionTelemetry();
 
             app.UseStaticFiles();
-
+            app.UseMiddleware<RequestLoggingMiddleware>();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
