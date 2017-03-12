@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using System.Threading.Tasks;
 using Logic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -25,8 +24,11 @@ namespace WebApplication1.Controllers
 
         public IActionResult TextFileToXml(IFormFile textFile)
         {
-            var reader = new StreamReader(textFile.OpenReadStream());
-            var text = reader.ReadToEnd();
+            string text;
+            using (var reader = new StreamReader(textFile.OpenReadStream()))
+            {
+                text = reader.ReadToEnd();
+            }
             return ConvertToXml(text);
         }
 
@@ -42,8 +44,11 @@ namespace WebApplication1.Controllers
 
         public IActionResult TextFileToCsv(IFormFile textFile)
         {
-            var reader = new StreamReader(textFile.OpenReadStream());
-            var text = reader.ReadToEnd();
+            string text;
+            using (var reader = new StreamReader(textFile.OpenReadStream()))
+            {
+                text = reader.ReadToEnd();
+            }
             return ConvertToCsv(text);
         }
 
