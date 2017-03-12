@@ -6,7 +6,7 @@ namespace WebApplication1.Controllers.Api
     public class AppController : Controller
     {
         [HttpPost("api/toXml")]
-        public IActionResult ToXml(string text)
+        public IActionResult ToXml([FromBody]string text)
         {
             var parser = new Parser();
             var sentences = parser.Parse(text);

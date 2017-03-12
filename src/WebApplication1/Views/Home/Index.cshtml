@@ -2,33 +2,23 @@
     ViewData["Title"] = "NorParser";
 }
 
+@section Scripts {
+    <script src="~/js/site.js"></script>
+}
+
 <div class="container">
     <div class="page-header">
         <h1>NorParser</h1>
         <h4>A .NET coding exercise from Nordea</h4>
     </div>
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-12">
             <div class="well">
-                <p>Input text below to convert it to XML</p>
-                <form asp-controller="Home" asp-action="ConvertToXml" method="get">
-                    <div class="form-group">
-                        <textarea class="form-control" id="text" name="text" rows="10"></textarea>
-                    </div>
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">To XML</button>
-                </form>
-            </div>
-        </div>
-        <div class="col-md-2"></div>
-        <div class="col-md-5">
-            <div class="well">
-                <p>Input text below to convert it to CSV</p>
-                <form asp-controller="Home" asp-action="ConvertToCsv" method="get">
-                    <div class="form-group">
-                        <textarea class="form-control" id="text" name="text" rows="10"></textarea>
-                    </div>
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">To CSV</button>
-                </form>
+                <p>Input text below to convert it to XML or CSV</p>
+                <div class="form-group">
+                    <textarea class="form-control" id="input" rows="10"></textarea>
+                </div>
+                <button class="btn btn-primary btn-lg btn-block" onclick="ConvertToXml()">To XML</button>
             </div>
         </div>
     </div>
@@ -62,7 +52,7 @@
             <br />
             <p>The convertion result will be displayed below:</p>
             <div class="form-group">
-                <textarea class="form-control" rows="30">@ViewData["ConversionResult"]</textarea>
+                <textarea id="resultTextArea" class="form-control" rows="30">@ViewData["ConversionResult"]</textarea>
             </div>
         </div>
     </div>
