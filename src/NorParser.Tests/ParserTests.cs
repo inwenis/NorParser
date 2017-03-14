@@ -134,12 +134,12 @@ class Parsing_sentences_with_special_characters_not_being_part_of_words
 
     Because of = () =>
     {
-        output = sut.Parse("aaa ' bbb - ccc '&' *-=");
+        output = sut.Parse("aaa ' bbb - ccc '&' *-= -xxx 'yyy zzz-");
     };
 
-    It return_only_validi_words = () =>
+    It return_only_valid_words = () =>
     {
-        output.First().Words.ShouldContainOnly("aaa", "bbb", "ccc");
+        output.First().Words.ShouldContainOnly("aaa", "bbb", "ccc", "xxx", "yyy", "zzz");
     };
 
     static Parser sut;

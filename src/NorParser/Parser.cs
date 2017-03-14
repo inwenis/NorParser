@@ -17,6 +17,9 @@ namespace NorParser
             {
                 var words = ReplaceCharactersNotAllowedInWordsWithSpaces(sentence)
                     .Split(new []{' '}, StringSplitOptions.RemoveEmptyEntries)
+                    .Select(RemoveLeadingHyphen)
+                    .Select(RemoveTrailingHyphen)
+                    .Select(RemoveLeadingApostrophe)
                     .Where(w => !string.IsNullOrWhiteSpace(w))
                     .Where(w => !w.All(char.IsPunctuation))
                     .OrderBy(s => s)
@@ -24,6 +27,21 @@ namespace NorParser
                 parsedSentences.Add(new Sentence {Words = words});
             }
             return parsedSentences;
+        }
+
+        private string RemoveLeadingApostrophe(string s)
+        {
+            return Regex.Replace(s, "^'+", "");
+        }
+
+        private string RemoveLeadingHyphen(string o)
+        {
+            return Regex.Replace(o, "^-+|-+$", "");
+        }
+
+        private string RemoveTrailingHyphen(string o)
+        {
+            return Regex.Replace(o, "-+$", "");
         }
 
         private string ReplaceCharactersNotAllowedInWordsWithSpaces(string input)
