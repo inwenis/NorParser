@@ -2,7 +2,7 @@
   "dependencies": {
     "Microsoft.NETCore.App": {
       "version": "1.0.1",
-      "type": "platform"
+      
     },
     "Microsoft.ApplicationInsights.AspNetCore": "1.0.0",
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
@@ -64,5 +64,9 @@
   "scripts": {
     "prepublish": [ "bower install", "dotnet bundle" ],
     "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
+  },
+
+  "runtimes": {
+    "win10-x64" : {}
   }
 }
