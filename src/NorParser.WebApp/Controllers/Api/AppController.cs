@@ -11,7 +11,7 @@ namespace NorParser.WebApp.Controllers.Api
             var sentences = parser.Parse(text);
             var xmlWriter = new XmlWriter();
             var xDocument = xmlWriter.Write(sentences);
-            return Content(xDocument.ToString());
+            return Content(xDocument.ToStringWithDeclaration());
         }
 
         [HttpPost("api/toCsv")]

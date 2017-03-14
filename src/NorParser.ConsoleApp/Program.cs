@@ -44,6 +44,8 @@ namespace NorParser.ConsoleApp
             var xDocument = xmlWriter.Write(sentences);
             Console.WriteLine("------------------------------");
             Console.WriteLine(xDocument.ToString());
+            Console.WriteLine("------------------------------");
+            Console.WriteLine(xDocument.ToStringWithDeclaration());
 
             var csvWriter = new CsvWriter();
             var csv = csvWriter.Write(sentences);
