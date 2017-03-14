@@ -6,7 +6,7 @@ namespace NorParser
 {
     public class XmlWriter
     {
-        public XDocument Write(List<Sentence> input)
+        public XDocument Write(IReadOnlyCollection<Sentence> input)
         {
             var sentenceElements = input.Select(sentence =>
             {

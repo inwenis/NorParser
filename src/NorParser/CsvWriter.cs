@@ -6,7 +6,7 @@ namespace NorParser
 {
     public class CsvWriter
     {
-        public string Write(List<Sentence> sentences)
+        public string Write(IReadOnlyCollection<Sentence> sentences)
         {
             var stringBuilder = new StringBuilder();
 
