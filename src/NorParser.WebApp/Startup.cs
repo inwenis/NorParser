@@ -32,7 +32,7 @@ namespace NorParser.WebApp
         {
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
-
+            services.AddSingleton(new Parser());
             services.AddMvc();
         }
 
