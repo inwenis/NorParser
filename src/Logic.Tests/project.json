@@ -3,10 +3,10 @@
 
   "dependencies": {
     "dotnet-test-mspec": "0.2.0",
-    "Logic": "1.0.0-*",
     "Machine.Specifications": "0.11.0",
     "Machine.Specifications.Should": "0.11.0",
     "NETStandard.Library": "1.6.0",
+    "NorParser": "1.0.0-*",
     "System.Linq": "4.3.0"
   },
 

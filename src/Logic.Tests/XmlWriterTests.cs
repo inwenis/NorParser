@@ -2,8 +2,8 @@
 using System.Linq;
 using System.Xml.Linq;
 using System.Xml.XPath;
-using Logic;
 using Machine.Specifications;
+using NorParser;
 
 [Subject(typeof(XmlWriter))]
 class Serializing_simple_sentence

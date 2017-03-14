@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Logic;
 using Machine.Specifications;
+using NorParser;
 
 [Subject(typeof(Parser))]
 class Parsing_a_simple_sentence

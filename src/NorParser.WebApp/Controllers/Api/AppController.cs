@@ -1,5 +1,4 @@
-﻿using Logic;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace NorParser.WebApp.Controllers.Api
 {

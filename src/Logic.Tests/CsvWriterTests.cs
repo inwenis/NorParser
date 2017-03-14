@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using Logic;
 using Machine.Specifications;
+using NorParser;
 
 [Subject(typeof(CsvWriter))]
 class Serializing_simple_sentence_to_csv

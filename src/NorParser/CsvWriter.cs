@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text;
 
-namespace Logic
+namespace NorParser
 {
     public class CsvWriter
     {
