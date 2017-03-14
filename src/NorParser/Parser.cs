@@ -24,7 +24,10 @@ namespace NorParser
                     .Where(w => !w.All(char.IsPunctuation))
                     .OrderBy(s => s)
                     .ToList();
-                parsedSentences.Add(new Sentence {Words = words});
+                if(words.Any())
+                {
+                    parsedSentences.Add(new Sentence {Words = words});
+                }
             }
             return parsedSentences;
         }

@@ -145,3 +145,25 @@ class Parsing_sentences_with_special_characters_not_being_part_of_words
     static Parser sut;
     static List<Sentence> output;
 }
+
+[Subject(typeof(Parser))]
+class Parsing_sentence_with_only_nonalphabetical_characters
+{
+    Establish context = () =>
+    {
+        sut = new Parser();
+    };
+
+    Because of = () =>
+    {
+        output = sut.Parse("this is a sentence. ';[] ;'[] - 0 909 . the previous sentence was not a real sentece");
+    };
+
+    private It does_not_return_empty_sentence = () =>
+    {
+        output.ShouldEachConformTo(s => s.Words.Any());
+    };
+
+    static Parser sut;
+    static List<Sentence> output;
+}
