@@ -1,7 +1,7 @@
 ﻿using System;
 using Logic;
 
-namespace NorParser
+namespace NorParser.ConsoleApp
 {
     public class Program
     {
