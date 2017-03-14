@@ -1,7 +1,7 @@
 ﻿using System;
 using Logic;
 
-namespace NorParser2
+namespace NorParser
 {
     public class Program
     {

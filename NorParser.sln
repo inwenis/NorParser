@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NorParser2", "src\NorParser2\NorParser2.xproj", "{A121DED7-8468-41B6-AC24-FFD00E22DF02}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NorParser", "src\NorParser\NorParser.xproj", "{A121DED7-8468-41B6-AC24-FFD00E22DF02}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Logic", "src\Logic\Logic.xproj", "{C8AC6E47-2FE3-47D3-B8ED-829EB7AAEE8C}"
 EndProject
