@@ -1,7 +1,7 @@
 ﻿using Logic;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApplication1.Controllers.Api
+namespace NorParser.WebApp.Controllers.Api
 {
     public class AppController : Controller
     {
