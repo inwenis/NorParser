@@ -12,7 +12,7 @@ class Serializing_simple_sentence
     {
         input = new List<Sentence>
         {
-            new Sentence {Words = new List<string> {"a", "bb", "ccc"}}
+            new Sentence(new List<string> {"a", "bb", "ccc"})
         };
         sut = new XmlWriter();
     };
@@ -49,8 +49,8 @@ class Serializing_multiple_sentences
     {
         input = new List<Sentence>
         {
-            new Sentence {Words = new List<string> {"a", "bb", "ccc"}},
-            new Sentence {Words = new List<string> {"d", "ee", "fff"}}
+            new Sentence(new List<string> {"a", "bb", "ccc"}),
+            new Sentence(new List<string> {"d", "ee", "fff"})
         };
         sut = new XmlWriter();
     };

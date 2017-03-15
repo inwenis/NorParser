@@ -26,7 +26,7 @@ namespace NorParser
                     .ToList();
                 if(words.Any())
                 {
-                    parsedSentences.Add(new Sentence {Words = words});
+                    parsedSentences.Add(new Sentence(words));
                 }
             }
             return parsedSentences;

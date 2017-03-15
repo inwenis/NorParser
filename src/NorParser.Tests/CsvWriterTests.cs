@@ -9,7 +9,7 @@ class Serializing_simple_sentence_to_csv
     {
         input = new List<Sentence>
         {
-            new Sentence {Words = new List<string> {"a", "bb", "ccc"}}
+            new Sentence(new List<string> {"a", "bb", "ccc"})
         };
         sut = new CsvWriter();
     };
