@@ -37,14 +37,14 @@ namespace NorParser
             return Regex.Replace(s, "^'+", "");
         }
 
-        private string RemoveLeadingHyphen(string o)
+        private string RemoveLeadingHyphen(string s)
         {
-            return Regex.Replace(o, "^-+|-+$", "");
+            return Regex.Replace(s, "^-+", "");
         }
 
-        private string RemoveTrailingHyphen(string o)
+        private string RemoveTrailingHyphen(string s)
         {
-            return Regex.Replace(o, "-+$", "");
+            return Regex.Replace(s, "-+$", "");
         }
 
         private string ReplaceCharactersNotAllowedInWordsWithSpaces(string input)
