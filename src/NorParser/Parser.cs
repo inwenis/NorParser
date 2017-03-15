@@ -47,9 +47,9 @@ namespace NorParser
             return Regex.Replace(s, "-+$", "");
         }
 
-        private string ReplaceCharactersNotAllowedInWordsWithSpaces(string input)
+        private string ReplaceCharactersNotAllowedInWordsWithSpaces(string s)
         {
-            return Regex.Replace(input, "[^a-zA-Z'-]+", " ");
+            return Regex.Replace(s, "[^a-zA-Z'-]+", " ");
         }
     }
 }
