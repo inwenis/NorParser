@@ -71,7 +71,7 @@ class Parsing_sentence_with_nonalphabetic_characters
 
     Because of = () =>
     {
-        output = sut.Parse("  i ~ had!a @mad# $ % ^ & * ( ) _ + - = ` { } |  : \" < > ? [ ] \\ ; , . / * + , ");
+        output = sut.Parse("  i ~ had}a @mad# $ % ^ & * ( ) _ + - = ` { } |  : \" < > [ ] \\ ; , . / * + , ");
     };
 
     It treats_non_alphabetic_characters_as_spaces = () =>
@@ -165,6 +165,28 @@ class Parsing_sentence_with_only_nonalphabetical_characters
     It does_not_return_empty_sentence = () =>
     {
         output.ShouldEachConformTo(s => s.Words.Any());
+    };
+
+    static Parser sut;
+    static List<Sentence> output;
+}
+
+[Subject(typeof(Parser))]
+class Parsing_sentence_with_different_sentence_separators
+{
+    Establish context = () =>
+    {
+        sut = new Parser();
+    };
+
+    Because of = () =>
+    {
+        output = sut.Parse("aaa. bbb ? ccc ! xxx");
+    };
+
+    It separates_sentences_for_every_separator = () =>
+    {
+        output.Count.ShouldEqual(4);
     };
 
     static Parser sut;

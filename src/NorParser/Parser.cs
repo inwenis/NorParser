@@ -7,7 +7,7 @@ namespace NorParser
 {
     public class Parser
     {
-        private readonly char[] _sentenceSeparators = { '.' };
+        private readonly char[] _sentenceSeparators = { '.', '?', '!' };
 
         public List<Sentence> Parse(string input)
         {
