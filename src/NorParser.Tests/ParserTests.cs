@@ -21,7 +21,8 @@ class Parsing_a_simple_sentence
         output.Count.ShouldEqual(1);
     };
 
-    It returns_all_words = () => {
+    It returns_all_words = () =>
+    {
         output.First().Words.ShouldContainOnly("Mary", "had", "a", "little", "lamb");
     };
 
@@ -47,7 +48,8 @@ class Parsing_sentence_with_multiple_spaces
         sut = new Parser();
     };
 
-    Because of = () => {
+    Because of = () =>
+    {
         output = sut.Parse("  had \t ");
     };
 
@@ -89,7 +91,8 @@ class Parsing_multiple_sentences_separated_by_dots
         sut = new Parser();
     };
 
-    Because of = () => {
+    Because of = () =>
+    {
         output = sut.Parse("i had a mad idea. The idea was great. Why didn't we use it");
     };
 
@@ -159,7 +162,7 @@ class Parsing_sentence_with_only_nonalphabetical_characters
         output = sut.Parse("this is a sentence. ';[] ;'[] - 0 909 . the previous sentence was not a real sentece");
     };
 
-    private It does_not_return_empty_sentence = () =>
+    It does_not_return_empty_sentence = () =>
     {
         output.ShouldEachConformTo(s => s.Words.Any());
     };
