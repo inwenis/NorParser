@@ -1,5 +1,9 @@
-TODO
+TODO - nice to have
 1. the parser seems like a perfect candidate for property-based tests
+2. add buttons filling input with some test data
+	a. input from specs
+	b. input from Lorem Ipsum
+3. integration test for Parser + Writer
 
 Assumptions:
 1. ' character are valid characters in words
